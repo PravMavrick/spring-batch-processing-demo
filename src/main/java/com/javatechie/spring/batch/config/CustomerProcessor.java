@@ -8,7 +8,9 @@ public class CustomerProcessor implements ItemProcessor<Customer, Customer> {
     @Override
     public Customer process(Customer customer) throws Exception {
 
-            return customer;
-
+        if (customer.getGender().equals("Male"))
+             return customer;
+        else
+            return null;
     }
 }
